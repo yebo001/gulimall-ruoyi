@@ -1,0 +1,3 @@
+com.gulimall.system.api.factory.RemoteUserFallbackFactory
+com.gulimall.system.api.factory.RemoteLogFallbackFactory
+com.gulimall.system.api.factory.RemoteFileFallbackFactory
