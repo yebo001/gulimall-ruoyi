@@ -18,6 +18,7 @@
         <module>gulimall-modules-order</module>
         <module>gulimall-modules-product</module>
         <module>gulimall-modules-ware</module>
+        <module>gulimall-modules-seckill</module>
     </modules>
 
     <artifactId>gulimall-modules</artifactId>

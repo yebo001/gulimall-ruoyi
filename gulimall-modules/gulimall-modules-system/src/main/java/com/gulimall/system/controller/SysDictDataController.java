@@ -74,7 +74,7 @@ public class SysDictDataController extends BaseController
      * 根据字典类型查询字典数据信息
      */
     @GetMapping(value = "/type/{dictType}")
-    public AjaxResult dictType(@PathVariable String dictType)
+    public AjaxResult dictType(@PathVariable(name = "dictType",required = true) String dictType)
     {
         List<SysDictData> data = dictTypeService.selectDictDataByType(dictType);
         if (StringUtils.isNull(data))

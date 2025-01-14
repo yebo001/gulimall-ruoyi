@@ -39,6 +39,8 @@
         <tomcat.version>9.0.96</tomcat.version>
         <logback.version>1.2.13</logback.version>
         <spring-framework.version>5.3.39</spring-framework.version>
+        <mybatis-plus.version>3.2.0</mybatis-plus.version>
+        <lombok.version>1.18.20</lombok.version>
     </properties>
 
     <!-- 依赖声明 -->
@@ -61,6 +63,19 @@
                 <version>${spring-cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+
+            <!--        mybatis-plus-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
             </dependency>
 
             <!-- SpringCloud Alibaba 微服务 -->
