@@ -63,5 +63,5 @@ public interface ICategoryService extends IService<Category>
 
     List<Category> listWithTree();
 
-    void removeMenuByIds(List<Long> asList);
+    void removeMenuByIds(Long[] asList);
 }

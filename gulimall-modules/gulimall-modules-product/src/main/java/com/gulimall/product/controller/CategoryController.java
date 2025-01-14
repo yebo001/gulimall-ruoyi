@@ -96,10 +96,10 @@ public class CategoryController extends BaseController
      */
     //@RequiresPermissions("product:category:remove")
     @Log(title = "商品三级分类", businessType = BusinessType.DELETE)
-	@DeleteMapping("/delete")
-    public R delete(@RequestBody Long[] catIds)
-    {
-        categoryService.removeMenuByIds(Arrays.asList(catIds));
+    @DeleteMapping("/delete/{catIds}")
+    public R delete(@PathVariable(name = "catIds") Long[] catIds) {
+
+        categoryService.removeMenuByIds(catIds);
         return R.ok();
     }
 }

@@ -136,14 +136,14 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryMapper,Category> im
     }
 
     @Override
-    public void removeMenuByIds(List<Long> asList) {
+    public void removeMenuByIds(Long[] asList) {
         //TODO 检查当前删除的菜单，是否被别的地方引用
 //        List<CategoryBrandRelationEntity> categoryBrandRelation =
 //                categoryBrandRelationService.list(new QueryWrapper<CategoryBrandRelationEntity>().in("catelog_id", asList));
 
 //        if (categoryBrandRelation.size() == 0) {
             //逻辑删除
-            baseMapper.deleteBatchIds(asList);
+        categoryMapper.deleteCategoryByCatIds(asList);
 //        } else {
 //            throw new RuntimeException("该菜单下面还有属性，无法删除!");
 //        }
